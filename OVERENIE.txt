@@ -1,0 +1,17 @@
+Overenie projektu, 25. 10. 2026
+
+- Priama HTTPS požiadavka na živý web bola úspešná.
+- Skript získal pri overovacom meraní hodnotu 139 osôb a zapísal CSV.
+  Ide o momentálnu testovaciu hodnotu, nie o historický údaj ani aktuálny prísľub.
+- Päť automatických testov úspešne prešlo: HTML a duplicity, nula a počet
+  nad kapacitou, chýbajúce/protichodné údaje, CSV a letný/zimný čas,
+  záznam chyby a neúspešný návratový kód.
+- Projektové CSV obsahuje iba hlavičku. Testovacie meranie nie je súčasťou dát.
+- ZIP bol skontrolovaný na integritu a obsah vrátane .github/workflows/monitor.yml.
+- Testy boli zopakované aj z rozbaleného výsledného archívu.
+- GitHub Actions nebol spustený v používateľovom účte. Prvý ručný beh po nahratí
+  overí oprávnenia, dostupnosť webu z GitHubu a ukladanie commitov.
+
+Aktualizácia: interval zmenený na 10 minút (7,17,27,37,47,57).
+Nový archív opäť skontrolovaný a pôvodných päť testov zopakovaných.
+Živé meranie vyššie pochádza z overenia pôvodnej verzie.
