@@ -1,7 +1,6 @@
 name: Obsadenosť plavárne
 on:
-  schedule:
-    - cron: '7,17,27,37,47,57 * * * *'
+  # Spúšťa cron-job.org každých 10 minút.
   workflow_dispatch:
 permissions:
   contents: write
