@@ -1,5 +1,5 @@
 import {forecast} from './forecast.mjs';
-import {parseCSV,localParts,groups} from './data.mjs';
+import {parseCSV,localParts,groups} from './data.mjs?v=hour-detail-1';
 const URL='https://raw.githubusercontent.com/fbobrik-pvc14/plavaren/refs/heads/main/data/occupancy.csv';
 const $=id=>document.getElementById(id), days=['Po','Ut','St','Št','Pi','So','Ne'];let records=[],busy=false;
 const fmt=(t,opts={})=>new Intl.DateTimeFormat('sk-SK',{timeZone:'Europe/Bratislava',...opts}).format(t);
