@@ -12,3 +12,4 @@ timestamp_utc,timestamp_bratislava,occupancy,status,error,source_url
 2026-10-26T07:10:31+00:00,2026-10-26T08:10:31+01:00,50,ok,,https://www.petrzalka.sk/plavaren/
 2026-10-26T07:20:32+00:00,2026-10-26T08:20:32+01:00,41,ok,,https://www.petrzalka.sk/plavaren/
 2026-10-26T07:30:44+00:00,2026-10-26T08:30:44+01:00,42,ok,,https://www.petrzalka.sk/plavaren/
+2026-10-26T07:40:29+00:00,2026-10-26T08:40:29+01:00,44,ok,,https://www.petrzalka.sk/plavaren/
