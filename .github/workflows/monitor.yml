@@ -31,7 +31,21 @@ jobs:
           git add data/occupancy.csv
           if ! git diff --cached --quiet; then
             git commit -m "Uložiť meranie obsadenosti"
-            git push origin "HEAD:${{ github.event.repository.default_branch }}"
+            saved=false
+            for attempt in 1 2 3 4 5; do
+              if git push origin "HEAD:${{ github.event.repository.default_branch }}"; then
+                saved=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then
+                echo "Uloženie zlyhalo, opakujem pokus po prestávke."
+                sleep "$((attempt * 15))"
+              fi
+            done
+            if [ "$saved" != true ]; then
+              echo "::error::CSV sa nepodarilo uložiť ani po 5 pokusoch; skontrolujte záložný artefakt."
+              exit 1
+            fi
           fi
       - name: Záložný CSV na stiahnutie
         if: always()
